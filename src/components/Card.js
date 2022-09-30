@@ -1,7 +1,13 @@
-function Card(props) {
+function Card({data, handleOpenModal}) {
     return (
         <div className="card">
-          <img className="img" src={props.link} alt={`full size view of ${props.name}`} title={props.name} />
+          <img 
+            className="img" 
+            src={data.link} 
+            alt={`full size view of ${data.prompt}`} 
+            title={data.prompt}
+            onClick={handleOpenModal}
+          />
         </div>
     );
 }

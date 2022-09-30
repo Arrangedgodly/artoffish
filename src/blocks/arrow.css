@@ -1,12 +1,16 @@
 .arrow {
     margin: 0 1vw;
-    transition: transform .2s ease-in-out;
+    transition: color .2s ease-in-out;
+    transform: scale(2);
 }
 
 .arrow:hover {
     cursor: pointer;
     color: rgb(0, 119, 255);
-    transform: translate(-10%, 0);
+}
+
+.arrow-disabled {
+    opacity: 0;
 }
 
 @media screen and (max-width: 720px) {

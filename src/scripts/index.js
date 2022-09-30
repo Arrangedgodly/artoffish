@@ -35,7 +35,7 @@ function changeHeaderImages() {
   rightHeaderImage.src = fishImages[10].link;
 }
 
-setInterval(changeHeaderImages, 1000);
+setInterval(changeHeaderImages, 500);
 
 let projectCount = 0;
 const leftArrow = document.querySelector(".fa-arrow-left");

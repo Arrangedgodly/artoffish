@@ -1,9 +1,24 @@
+import React from 'react';
+import {fishImages} from '../scripts/fishImages';
+
 function Header() {
+    const [fishTracker, setFishTracker] = React.useState(0);
+    const upFishTracker = () => {setFishTracker(fishTracker + 2)};
+    const resetFishTracker = () => {setFishTracker(0)};
+
+    React.useEffect(() => {
+        if (fishTracker < (fishImages.length - 3)) {
+            setInterval(upFishTracker, 1000);
+        } else {
+            resetFishTracker();
+        }
+    }, [fishTracker])
+
     return (
         <header className="header">
             <img 
                 className="img-head img-head-left" 
-                src=""
+                src={fishImages[fishTracker].link}
                 alt="header fish"
                 loading="eager"
             />
@@ -34,7 +49,7 @@ function Header() {
             <i className="fa-solid fa-rotate fa-5x refresh"></i>
             <img 
                 className="img-head img-head-right" 
-                src=""
+                src={fishImages[fishTracker + 1].link}
                 alt="header fish"
                 loading="eager"
             />
