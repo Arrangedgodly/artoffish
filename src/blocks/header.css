@@ -1,0 +1,11 @@
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  color: #fff;
+  background-image: linear-gradient(rgb(126, 126, 126), rgb(80, 80, 80));
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}

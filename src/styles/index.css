@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Amatic+SC&family=Bebas+Neue&family=Black+Ops+One&family=Cabin:ital@0;1&family=Cinzel&family=Inspiration&family=Kalam&family=Luckiest+Guy&family=Nanum+Pen+Script&family=PT+Mono&family=Pangolin&family=Raleway:ital,wght@0,500;1,100&family=Rock+Salt&family=Shrikhand&family=Silkscreen&family=Splash&family=Syncopate&family=Tiro+Gurmukhi:ital@0;1&display=swap');
+@import url("../blocks/header.css");
+@import url("../blocks/sort.css");
+@import url("../blocks/refresh.css");
+@import url("../blocks/search.css");
+@import url("../blocks/modal.css");
+@import url("../blocks/cards.css");
+@import url("../blocks/page.css");
+@import url("../blocks/card.css");
+@import url("../blocks/img.css");
+@import url("../blocks/text.css");
+@import url("../blocks/arrows.css");
+@import url("../blocks/arrow.css");
+
+/*
+font-family: 'Alumni Sans Pinstripe', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Black Ops One', cursive;
+font-family: 'Cabin', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Inspiration', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'Pangolin', cursive;
+font-family: 'PT Mono', monospace;
+font-family: 'Raleway', sans-serif;
+font-family: 'Rock Salt', cursive;
+font-family: 'Shrikhand', cursive;
+font-family: 'Silkscreen', cursive;
+font-family: 'Splash', cursive;
+font-family: 'Syncopate', sans-serif;
+font-family: 'Tiro Gurmukhi', serif;
+*/
+
+html {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+}

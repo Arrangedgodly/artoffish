@@ -1,0 +1,124 @@
+.text-center {
+  text-align: center;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 3;
+}
+
+.text-modal {
+  font-size: 20px;
+  font-weight: 100;
+  font-style: italic;
+  color: #fff;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: -3vh;
+  margin: 0;
+}
+
+.text-main {
+  font-size: 5vw;
+  margin: 1vh auto 3vh auto;
+  font-weight: 500;
+  max-height: 8vh;
+}
+
+.text-desc {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 1.75vw;
+  margin: 1vh auto 1vh auto;
+  font-weight: 100;
+  max-width: 100%;
+}
+
+.text-subdesc {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 1.25vw;
+  margin: 1vh auto 1vh auto;
+  font-weight: 100;
+  max-width: 100%;
+}
+
+@keyframes changeFontStyle {
+  0% {
+    font-style: italic;
+  }
+  100% {
+    font-style: normal;
+  }
+}
+
+@keyframes changeFontFamily {
+  0% {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+  }
+  6.25% {
+    font-family: 'Amatic SC', cursive;
+  }
+  12.5% {
+    font-family: 'Bebas Neue', cursive;
+  }
+  19.75% {
+    font-family: 'Black Ops One', cursive;
+  }
+  25% {
+    font-family: 'Cabin', sans-serif;
+  }
+  31.25% {
+    font-family: 'Cinzel', serif;
+  }
+  37.5% {
+    font-family: 'Inspiration', cursive;
+  }
+  43.75% {
+    font-family: 'Kalam', cursive;
+  }
+  50% {
+    font-family: 'Luckiest Guy', cursive;
+  }
+  56.25% {
+    font-family: 'Nanum Pen Script', cursive;
+  }
+  62.5% {
+    font-family: 'Pangolin', cursive;
+  }
+  68.75% {
+    font-family: 'PT Mono', monospace;
+  }
+  75% {
+    font-family: 'Raleway', sans-serif;
+  }
+  81.25% {
+    font-family: 'Rock Salt', cursive;
+  }
+  87.5% {
+    font-family: 'Shrikhand', cursive;
+  }
+  93.75% {
+    font-family: 'Silkscreen', cursive;
+  }
+  100% {
+    font-family: 'Splash', cursive;
+  }
+}
+
+.text-main-span {
+  animation: changeFontFamily 3s linear infinite;
+}
+
+@media screen and (max-width: 720px) {
+  .text-main {
+    font-size: 4vw;
+  }
+
+  .text-desc {
+    font-size: 3vw;
+  }
+}

@@ -1,0 +1,20 @@
+.sort {
+  transition: color .2s ease-in-out, transform .3s ease-in-out;
+  grid-column-start: 2;
+}
+
+.sort:hover {
+  cursor: pointer;
+  color: rgb(0, 119, 255);
+  transform: translate(0, 10%);
+}
+
+@media screen and (max-width: 720px) {
+  .sort {
+    transform: scale(0.3);
+  }
+
+  .sort:hover {
+    transform: translate(0, 10%) scale(0.3);
+  }
+}

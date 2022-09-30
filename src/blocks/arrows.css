@@ -1,0 +1,15 @@
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh auto;
+    position: fixed;
+    width: 100%;
+    max-width: 100vw;
+    top: 50%;
+}
+
+@media screen and (max-width: 720px) {
+    .arrows {
+        margin: 1vh auto;
+    }
+}
