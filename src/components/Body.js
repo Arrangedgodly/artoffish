@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import Modal from "./Modal";
 import {initialCards} from '../scripts/initialCards';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -7,8 +8,30 @@ import { shuffle, checkZero, checkLast } from '../utils/constants';
 
 const cards = shuffle(initialCards);
 
-function Body({handleOpenModal}) {
+function Body() {
     const [pageCount, setPageCount] = React.useState(0);
+    const [selectedCard, setSelectedCard] = React.useState();
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+    const handleCardClick = (data) => {
+        setSelectedCard(data);
+        setIsModalOpen(true);
+    }
+
+    const handleCardClose = () => {
+        setSelectedCard();
+        setIsModalOpen(false);
+    }
+
+    React.useEffect(() => {
+        const close = (e) => {
+          if (e.keyCode === 27){
+            handleCardClose();
+          }
+        }
+        window.addEventListener('keydown', close);
+        return () => {window.removeEventListener('keydown', close)}
+      }, [])
 
     const incrementPageCount = () => {
         setPageCount(pageCount + 1)
@@ -23,6 +46,12 @@ function Body({handleOpenModal}) {
     const numberOfPages = Math.ceil(numberOfItems / numberPerPage);
 
     return (
+        <>
+        {isModalOpen && (
+            <Modal
+                data={selectedCard}
+            />
+        )}
         <div>
             <div className="arrows">
                 <button
@@ -56,7 +85,7 @@ function Body({handleOpenModal}) {
                             .map((card, i) => (
                                 <Card
                                     data={card}
-                                    handleOpenModal={handleOpenModal}
+                                    handleOpenModal={() => handleCardClick(card)}
                                     key={i}
                                 />
                             ))
@@ -64,6 +93,7 @@ function Body({handleOpenModal}) {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 
