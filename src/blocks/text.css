@@ -23,7 +23,7 @@
 
 .text-main {
   font-size: 5vw;
-  margin: 1vh auto 3vh auto;
+  padding: 1vh auto 3vh auto;
   font-weight: 500;
   max-height: 8vh;
 }

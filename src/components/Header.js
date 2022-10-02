@@ -1,18 +1,26 @@
 import React from 'react';
 import {fishImages} from '../scripts/fishImages';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRotate, faSort, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     const [fishTracker, setFishTracker] = React.useState(0);
     const upFishTracker = () => {setFishTracker(fishTracker + 2)};
     const resetFishTracker = () => {setFishTracker(0)};
 
-    React.useEffect(() => {
+    const checkTracker = () => {
         if (fishTracker < (fishImages.length - 3)) {
-            setInterval(upFishTracker, 1000);
+            upFishTracker();
         } else {
             resetFishTracker();
         }
-    }, [fishTracker])
+    }
+
+    
+
+    React.useEffect(() => {
+       setInterval(checkTracker, 300);
+    }, [])
 
     return (
         <header className="header">
@@ -22,7 +30,10 @@ function Header() {
                 alt="header fish"
                 loading="eager"
             />
-            <i className="fa-solid fa-sort fa-5x sort"></i>
+            <FontAwesomeIcon
+                icon={faSort}
+                className="fa-solid fa-sort fa-5x sort" 
+            />
             <div className="text-wrapper">
             <h1 className="text-main text-center">
                 <span className="text-main-span">ART</span>
@@ -40,13 +51,16 @@ function Header() {
                     maxLength="200"
                     />
                 </label>
-                <button 
-                type="submit"
+                <FontAwesomeIcon 
+                icon={faMagnifyingGlass}
                 className="search-button fa-solid fa-magnifying-glass"
-                ></button>
+                />
                 </form>
             </div>
-            <i className="fa-solid fa-rotate fa-5x refresh"></i>
+            <FontAwesomeIcon 
+                icon={faRotate}
+                className="fa-solid fa-rotate fa-5x refresh" 
+            />
             <img 
                 className="img-head img-head-right" 
                 src={fishImages[fishTracker + 1].link}
