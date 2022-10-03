@@ -5,6 +5,7 @@ import { faRotate, faSort, faMagnifyingGlass } from '@fortawesome/free-solid-svg
 
 function Header() {
     const [fishTracker, setFishTracker] = React.useState(0);
+
     const upFishTracker = () => {setFishTracker(fishTracker + 2)};
     const resetFishTracker = () => {setFishTracker(0)};
 
@@ -16,11 +17,9 @@ function Header() {
         }
     }
 
-    
-
     React.useEffect(() => {
-       setInterval(checkTracker, 300);
-    }, [])
+       setTimeout(checkTracker, 1000);
+    }, [fishTracker])
 
     return (
         <header className="header">

@@ -23,9 +23,12 @@
 
 .text-main {
   font-size: 5vw;
-  padding: 1vh auto 3vh auto;
+  margin: 1vh auto 10vh auto;
   font-weight: 500;
   max-height: 8vh;
+  padding: 0;
+  max-width: 27vw;
+  text-align: center;
 }
 
 .text-desc {
